@@ -1,0 +1,12 @@
+.day {
+  border: 1px solid white;
+  padding: 5px;
+  width: 28px;
+  height: 14px;
+  margin: auto;
+  line-height: 14px;
+}
+
+.isHidden {
+  visibility: hidden;
+}

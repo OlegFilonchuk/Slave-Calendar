@@ -1,0 +1,5 @@
+.sidebar{
+  text-align: center;
+  background: pink;
+  grid-area: S;
+}

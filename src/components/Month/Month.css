@@ -1,0 +1,22 @@
+.month {
+  background: blue;
+  list-style-type: none;
+  text-align: center;
+}
+
+.month-row {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto;
+  row-gap: 10px;
+  padding: 10px 0;;
+}
+
+.month-header {
+  background: #e6e6e6;
+  color: black;
+}
+
+span {
+  width: 28px;
+  margin: auto;
+}

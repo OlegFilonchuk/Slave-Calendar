@@ -1,0 +1,13 @@
+.mainscreen {
+  text-align: center;
+  background: yellow;
+  color: rgb(226, 224, 224);
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 30px;
+  padding: 30px;
+  color: white;
+}
+.mainscreen-container {
+  grid-area: M;
+}
