@@ -1,7 +1,9 @@
 .month {
-  background: blue;
+  background: rgb(133, 228, 223);
   list-style-type: none;
   text-align: center;
+  border-radius: 5px;
+  user-select: none;
 }
 
 .month-row {
@@ -12,11 +14,10 @@
 }
 
 .month-header {
-  background: #e6e6e6;
+  background: #bbbbbb;
   color: black;
 }
 
-span {
-  width: 28px;
-  margin: auto;
+h3 {
+  color: grey
 }

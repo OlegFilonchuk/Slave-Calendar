@@ -1,12 +1,12 @@
 .mainscreen {
   text-align: center;
-  background: yellow;
-  color: rgb(226, 224, 224);
+  background: rgb(240, 240, 240);
   display: grid;
   grid-template-columns: auto auto;
   grid-gap: 30px;
   padding: 30px;
   color: white;
+  border-radius: 5px;
 }
 .mainscreen-container {
   grid-area: M;

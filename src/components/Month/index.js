@@ -19,7 +19,8 @@ export default class Month extends Component {
     if (this.counter > this.lastDate+1) {
       value = null
     }
-    return <Day value={value} key={x} isHidden={isHidden}/>
+    const date = new Date(this.props.year, this.props.month, this.counter-1)
+    return <Day date={date} value={value} key={x} isHidden={isHidden}/>
   }
     
   getTable = () => {
@@ -38,13 +39,13 @@ export default class Month extends Component {
       <li className="month">
         <h3>{names[month]}</h3>
         <div className="month-row month-header">
-          <span>Su</span>
-          <span>Mo</span>
-          <span>Tu</span>
-          <span>We</span>
-          <span>Th</span>
-          <span>Fr</span>
-          <span>Sa</span>
+          <div>Su</div>
+          <div>Mo</div>
+          <div>Tu</div>
+          <div>We</div>
+          <div>Th</div>
+          <div>Fr</div>
+          <div>Sa</div>
         </div>
         <div className="month-row">
           {this.getTable()}

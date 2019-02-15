@@ -1,5 +1,6 @@
 .sidebar{
   text-align: center;
-  background: pink;
+  background: rgb(80, 81, 92);
   grid-area: S;
+  border-radius: 5px;
 }

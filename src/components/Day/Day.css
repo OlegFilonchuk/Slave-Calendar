@@ -1,10 +1,15 @@
 .day {
-  border: 1px solid white;
-  padding: 5px;
-  width: 28px;
-  height: 14px;
   margin: auto;
-  line-height: 14px;
+  padding: 5px 10px;
+  width: 24px;
+  line-height: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius:  1px 5px;
+}
+
+.day:hover {
+  background: rgb(84, 182, 187);
 }
 
 .isHidden {
