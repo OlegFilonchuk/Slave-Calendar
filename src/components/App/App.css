@@ -12,7 +12,7 @@ h1 {
   background: rgb(172, 172, 172);
   display: grid;
   grid-template-areas:
-    'S M M'
-    'S M M';
+    'S S M'
+    'S S M';
   grid-gap: 15px;
 }

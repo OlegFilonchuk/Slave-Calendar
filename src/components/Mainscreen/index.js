@@ -4,20 +4,42 @@ import './Mainscreen.css'
 
 export default class Mainscreen extends Component {
 
-  render() {
-    const date = new Date()
-    const currentYear = date.getFullYear()
-    
+  state = {
+    year: new Date().getFullYear()
+  }
+
+  handleNextButtonClick = (ev) => {
+    ev.preventDefault()
+    this.setState((prevState) => {
+      return {year: prevState.year + 1}
+    })
+  }
+  
+  handlePreviousButtonClick = (ev) => {
+    ev.preventDefault()
+    this.setState((prevState) => {
+      return {year: prevState.year - 1}
+    })
+  }
+
+  getBody = () => {
     const monthsArray = [];
     for (let i = 0; i < 12; i++) {
-      monthsArray.push(<Month key={i} year={currentYear} month={i}/>) 
+      monthsArray.push(<Month key={i} year={this.state.year} month={i}/>) 
     }
+    return monthsArray
+  }
 
+  render() {
     return (
       <div className="mainscreen-container">
-        <h1>{currentYear}</h1>
+        <div className="mainscreen-header">
+          <h1>{this.state.year}</h1>
+          <button onClick={this.handlePreviousButtonClick}>previous</button>
+          <button onClick={this.handleNextButtonClick}>next</button>
+        </div>
         <ul className="mainscreen">
-          {monthsArray}
+          {this.getBody()}
         </ul>
       </div>
     )
