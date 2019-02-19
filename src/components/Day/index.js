@@ -5,7 +5,7 @@ export default class Day extends Component {
 
     handleClick = (ev) => {
       ev.preventDefault()
-      ev.target.classList.toggle('selected')
+      ev.target.classList.add('selected')
       this.props.startSelect(this.props.date)
     }
     

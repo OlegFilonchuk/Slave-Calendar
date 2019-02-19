@@ -6,7 +6,6 @@ export default class Sidebar extends Component {
   handleButtonClick = (ev) => {
     ev.preventDefault()
     this.props.closeSelection()
-    console.log('selection closed')
   }
     
   render() {

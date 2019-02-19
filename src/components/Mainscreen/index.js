@@ -5,7 +5,7 @@ import './Mainscreen.css'
 export default class Mainscreen extends Component {
 
   state = {
-    year: new Date().getFullYear(),
+    year: new Date().getFullYear()
   }
 
   handleNextButtonClick = (ev) => {
