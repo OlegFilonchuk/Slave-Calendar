@@ -15,3 +15,11 @@
 .isHidden {
   visibility: hidden;
 }
+
+.isToday {
+  color: rgb(37, 28, 28);
+}
+
+.selected {
+  color: red;
+}

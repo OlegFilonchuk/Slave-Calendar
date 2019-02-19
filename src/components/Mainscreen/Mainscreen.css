@@ -1,4 +1,4 @@
-.mainscreen {
+.mainscreen-list {
   text-align: center;
   background: rgb(240, 240, 240);
   display: grid;
@@ -9,6 +9,41 @@
   border-radius: 5px;
   box-shadow: 1px 1px 1px 1px whitesmoke;
 }
+
 .mainscreen-container {
   grid-area: M;
+}
+
+.mainscreen-header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.button {
+  cursor: pointer;
+  width: 46px;
+  line-height: 46px;
+  border-radius: 5px;
+}
+
+.button:hover {
+  box-shadow: 0px 0px 3px 3px lightgrey;
+}
+
+.button:active {
+  box-shadow: 0 0 1px 1px grey;
+}
+
+.button-prev {
+  margin-left: 150px;
+}
+
+.button-next {
+  margin-right: 150px;
 }

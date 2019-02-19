@@ -5,14 +5,16 @@ export default class Day extends Component {
 
     handleClick = (ev) => {
       ev.preventDefault()
-      alert(this.props.date)
+      ev.target.classList.toggle('selected')
+      this.props.startSelect(this.props.date)
     }
     
     render() {
     const isHidden = this.props.isHidden ? 'isHidden' : ''
+    const isToday = this.props.isToday ? 'isToday' : ''
     return (
       <div
-        className={`day ${isHidden}`}
+        className={`day ${isHidden} ${isToday}`}
         onClick={this.handleClick}
       >
         {this.props.value}

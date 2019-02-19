@@ -5,25 +5,46 @@ import './Month.css';
 export default class Month extends Component {
   
   getTable = () => {
-    const renderDay = (x) => {
-      let value = null
-      let isHidden = true
-      if (x >= firstDay.getDay()) {
-        value = counter++
-        isHidden = false
-      }
-      if (counter > lastDate+1) {
-        value = null
-      }
-      const date = new Date(this.props.year, this.props.month, counter-1)
-      return <Day date={date} value={value} key={x} isHidden={isHidden}/>
-    }
-    
     const firstDay = new Date(this.props.year, this.props.month) // the first day of the month
-    const lastDate = 32 - new Date(this.props.year, this.props.month, 32).getDate() // the last day
-    let counter = 1
+    const lastDate = 32 - new Date(this.props.year, this.props.month, 32).getDate() // the number of the last day
+    let daysCounter = 1 // counter of month days
     const n = firstDay.getDay() + lastDate // number of the last cell
     const daysArray = []
+    
+    const renderDay = (x) => {
+      let isToday = false
+      const today = new Date()
+      let value = null
+      let isHidden = true
+
+      if (x >= firstDay.getDay()) {
+        value = daysCounter++
+        isHidden = false
+      }
+
+      if (daysCounter > lastDate+1) {
+        value = null
+        daysCounter = 1
+      }
+
+      const date = new Date(this.props.year, this.props.month, daysCounter-1)
+
+      if (new Date(today.getFullYear(), today.getMonth(), today.getDate()).valueOf() === +date) { // highlight today
+        isToday = true
+      }       
+      
+      return (
+        <Day
+          date={date}
+          value={value}
+          key={x}
+          isHidden={isHidden}
+          isToday={isToday}
+          startSelect={this.props.startSelect}
+        />
+      )
+    }
+    
     for (let i=0; i<n; i++) {
       daysArray.push(renderDay(i))
     }
