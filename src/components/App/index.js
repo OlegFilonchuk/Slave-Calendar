@@ -24,14 +24,13 @@ class App extends Component {
       this.setState({
         start: date
       })
-      console.log(`selection started: ${start}`);
     }
 
     return true
   }
   
   endSelect = (date) => {
-    const { start, end } = this.state
+    const { start } = this.state
     
     if (+date === +start) {
       this.closeSelection()
@@ -41,7 +40,6 @@ class App extends Component {
       end: date,
       block: true
     })
-    console.log(`selection ended: ${end}`);
     //TODO: add selected days higlighting
 
     return true

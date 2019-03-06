@@ -7,12 +7,22 @@ export default class Sidebar extends Component {
     ev.preventDefault()
     this.props.closeSelection()
   }
+
+  getTotal = (start, end) => {
+    if (start && end) {
+      return (+end - +start)/1000/60/60/24 + 1
+    }
+    return 
+  }
+  
     
   render() {
+    const { start, end } = this.props.selection
+
     return (
       <div className="sidebar">
         <button onClick={this.handleButtonClick}>close selection</button>
-        <div>Start {+this.props.selection.start}</div>
+        <div>Total {this.getTotal(start, end)} days</div>
       </div>
     )
   }
