@@ -32,13 +32,9 @@ export default class Mainscreen extends Component {
 
   componentDidMount() {
     this.mainscreenCont.style.height = document.documentElement.clientHeight - parseFloat(getComputedStyle(this.mainscreenHeader).height) + 'px'
-    console.log(document.documentElement.clientHeight)
-    console.log(parseFloat(getComputedStyle(this.mainscreenHeader).height))
   }
 
   render() {
-
-
     return (
       <div className="mainscreen-container">
         <div className="mainscreen-header" ref={(node) => {this.mainscreenHeader = node}}>

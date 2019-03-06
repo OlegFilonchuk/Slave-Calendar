@@ -11,6 +11,6 @@
   display: grid;
   grid-gap: 24px;
   grid-template-areas:
-    'S M M'
-    'S M M';
+    'S M M M'
+    'S M M M';
 }

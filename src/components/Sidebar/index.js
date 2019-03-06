@@ -12,7 +12,7 @@ export default class Sidebar extends Component {
     if (start && end) {
       return (+end - +start)/1000/60/60/24 + 1
     }
-    return 
+    return 0
   }
   
     
@@ -21,8 +21,8 @@ export default class Sidebar extends Component {
 
     return (
       <div className="sidebar">
-        <div className="sidebar__button" onClick={this.handleButtonClick}>close selection</div>
-        <div>Total {this.getTotal(start, end)} days</div>
+        <div className="sidebar__button" onClick={this.handleButtonClick}>Remove selection</div>
+        <div className="total">Total days: <span className='number'>{this.getTotal(start, end)}</span></div>
       </div>
     )
   }
