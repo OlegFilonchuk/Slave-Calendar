@@ -2,6 +2,8 @@ h1 {
   margin: 0px;
 }
 .container {
+  box-sizing: border-box;
+  height: 100vh;
   width: 1080px;
   margin: auto;
   padding: 20px;
@@ -10,9 +12,11 @@ h1 {
   font-size: 17px;
   color: #fff;
   background: rgb(172, 172, 172);
-  display: grid;
+  /* display: grid;
   grid-template-areas:
-    'S S M'
-    'S S M';
-  grid-gap: 15px;
+    'S M M'
+    'S M M'; */
+  display: flex;
+  justify-content: space-around;
+  position: relative;
 }

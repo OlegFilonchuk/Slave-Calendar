@@ -11,8 +11,8 @@ export default class Sidebar extends Component {
   render() {
     return (
       <div className="sidebar">
-        Sidebar
         <button onClick={this.handleButtonClick}>close selection</button>
+        <div>Start {+this.props.selection.start}</div>
       </div>
     )
   }

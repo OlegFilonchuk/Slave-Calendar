@@ -5,8 +5,9 @@ export default class Day extends Component {
 
     handleClick = (ev) => {
       ev.preventDefault()
-      ev.target.classList.add('selected')
-      this.props.startSelect(this.props.date)
+      if (this.props.startSelect(this.props.date)) {
+        ev.target.classList.add('selected')
+      }
     }
     
     render() {

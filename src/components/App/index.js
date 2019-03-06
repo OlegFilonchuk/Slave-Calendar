@@ -7,23 +7,27 @@ class App extends Component {
 
   state = {
     start: null,
-    end: null
+    end: null,
+    block: false
   }
 
   startSelect = (date) => {
-    const { start } = this.state
+    const { start, block } = this.state
+
+    if (block) return
 
     if (start) {
-      this.endSelect(date)
-      return
+      return this.endSelect(date)
     }
 
     if (!start) {
       this.setState({
         start: date
       })
-      console.log(`selection started; ${start}`);
+      console.log(`selection started: ${start}`);
     }
+
+    return true
   }
   
   endSelect = (date) => {
@@ -34,15 +38,20 @@ class App extends Component {
       return
     }
     this.setState({
-      end: date
+      end: date,
+      block: true
     })
-    console.log(`selection ended; ${start}`);
+    console.log(`selection ended: ${end}`);
+    //TODO: add selected days higlighting
+
+    return true
   }
 
   closeSelection = () => {
     this.setState({
       start: null,
-      end: null
+      end: null,
+      block: false
     })
     document.querySelectorAll('.selected').forEach((elem) => {
       elem.classList.remove('selected')
@@ -51,9 +60,11 @@ class App extends Component {
   }
 
   render() {
+    const { start, end } = this.state
+
     return (
       <div className="container">
-        <Sidebar selection={this.state} closeSelection={this.closeSelection}/>
+        <Sidebar selection={{start, end}} closeSelection={this.closeSelection}/>
         <Mainscreen startSelect={this.startSelect}/>
       </div> 
     );
