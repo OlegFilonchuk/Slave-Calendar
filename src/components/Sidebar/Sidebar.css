@@ -1,10 +1,10 @@
 .sidebar{
-  text-align: center;
   background: rgb(80, 81, 92);
   grid-area: S;
   border-radius: 5px;
-  width: 273px;
-  /* position: absolute; */
-  /* top: 10px; */
-  /* left: 10px; */
+  padding: 10px;
+}
+
+.sidebar__button {
+  background: rgb(240, 240, 240);
 }

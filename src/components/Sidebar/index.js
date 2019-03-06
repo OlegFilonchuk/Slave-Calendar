@@ -21,7 +21,7 @@ export default class Sidebar extends Component {
 
     return (
       <div className="sidebar">
-        <button onClick={this.handleButtonClick}>close selection</button>
+        <div className="sidebar__button" onClick={this.handleButtonClick}>close selection</div>
         <div>Total {this.getTotal(start, end)} days</div>
       </div>
     )
