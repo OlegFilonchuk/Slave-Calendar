@@ -34,9 +34,9 @@ export default class Mainscreen extends Component {
     return (
       <div className="mainscreen-container">
         <div className="mainscreen-header">
-          <div className="button button-prev" onClick={this.handlePreviousButtonClick}>{'<'}</div>
+          <div className="button button-prev" onClick={this.handlePreviousButtonClick}><i className="fas fa-chevron-circle-left"></i></div>
           <h1>{this.state.year}</h1>
-          <div className="button button-next" onClick={this.handleNextButtonClick}>{'>'}</div>
+          <div className="button button-next" onClick={this.handleNextButtonClick}><i className="fas fa-chevron-circle-right"></i></div>
         </div>
         <ul className="mainscreen-list">
           {this.getBody()}
