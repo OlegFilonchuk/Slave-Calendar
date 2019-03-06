@@ -31,7 +31,9 @@ export default class Mainscreen extends Component {
   }
 
   componentDidMount() {
-    this.mainScreenCont.style.height = '400px'
+    this.mainscreenCont.style.height = document.documentElement.clientHeight - parseFloat(getComputedStyle(this.mainscreenHeader).height) + 'px'
+    console.log(document.documentElement.clientHeight)
+    console.log(parseFloat(getComputedStyle(this.mainscreenHeader).height))
   }
 
   render() {
@@ -39,12 +41,12 @@ export default class Mainscreen extends Component {
 
     return (
       <div className="mainscreen-container">
-        <div className="mainscreen-header">
+        <div className="mainscreen-header" ref={(node) => {this.mainscreenHeader = node}}>
           <div className="button button-prev" onClick={this.handlePreviousButtonClick}><i className="fas fa-chevron-circle-left"></i></div>
           <h1>{this.state.year}</h1>
           <div className="button button-next" onClick={this.handleNextButtonClick}><i className="fas fa-chevron-circle-right"></i></div>
         </div>
-        <div className="mainscreen-calendar" height='300px'  ref={(node) => {this.mainScreenCont = node}}>
+        <div className="mainscreen-calendar" ref={(node) => {this.mainscreenCont = node}}>
           <ul className="mainscreen-list">
             {this.getBody()}
           </ul>

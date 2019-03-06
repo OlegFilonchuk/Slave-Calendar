@@ -20,6 +20,7 @@
   padding: 30px;
   color: #fff;
   box-shadow: 1px 1px 1px 1px whitesmoke;
+  border-radius: 5px;
   overflow-y: scroll;
 }
 
@@ -27,7 +28,6 @@
   display: grid;
   grid-template-columns: auto auto;
   grid-gap: 30px;
-  border-radius: 5px;
   /* height: 493px; */
 }
 
