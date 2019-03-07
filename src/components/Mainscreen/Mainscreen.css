@@ -28,7 +28,6 @@
   display: grid;
   grid-template-columns: auto auto;
   grid-gap: 30px;
-  /* height: 493px; */
 }
 
 .button {

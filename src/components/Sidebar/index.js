@@ -14,8 +14,8 @@ export default class Sidebar extends Component {
     }
     return 0
   }
-  
-    
+  //TODO: why does this gred chenges sidebar's width?!  
+
   render() {
     const { start, end } = this.props.selection
 
