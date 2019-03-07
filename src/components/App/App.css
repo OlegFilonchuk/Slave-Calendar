@@ -1,6 +1,5 @@
 .container {
   height: 100vh;
-  width: 1080px;
   margin: auto;
   padding: 24px;
   text-align: center;
@@ -10,7 +9,9 @@
   background: rgb(172, 172, 172);
   display: grid;
   grid-gap: 24px;
-  grid-template-areas:
+  /* grid-template-areas:
     'S M M M'
-    'S M M M';
+    'S M M M'; */
+  grid-auto-columns: 200px auto;
+  grid-auto-rows: auto;
 }

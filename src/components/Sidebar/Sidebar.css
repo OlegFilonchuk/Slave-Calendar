@@ -5,7 +5,8 @@
   padding: 10px;
   box-shadow: 1px 1px 10px 1px grey;
   text-align: left;
-  /* max-width: 288px; */
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
 }
 
 .sidebar__button {
@@ -21,11 +22,12 @@
 }
 
 .total {
-  padding: 20px 0;
+  padding: 20px 0 0;
   font-size: 31px;
 }
 
 .number {
+  width: 50px;
   font-size: 41px;
   color: red;
 }

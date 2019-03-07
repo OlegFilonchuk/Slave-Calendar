@@ -14,7 +14,7 @@ export default class Sidebar extends Component {
     }
     return 0
   }
-  //TODO: why does this gred chenges sidebar's width?!  
+  //TODO: why does this grid chenges sidebar's width?!  
 
   render() {
     const { start, end } = this.props.selection
@@ -22,7 +22,8 @@ export default class Sidebar extends Component {
     return (
       <div className="sidebar">
         <div className="sidebar__button" onClick={this.handleButtonClick}>Remove selection</div>
-        <div className="total">Total days: <span className='number'>{this.getTotal(start, end)}</span></div>
+        <div className="total">Total days:</div>
+        <div className='number'>{this.getTotal(start, end)}</div>
       </div>
     )
   }
