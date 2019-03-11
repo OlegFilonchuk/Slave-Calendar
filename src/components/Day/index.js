@@ -13,9 +13,10 @@ export default class Day extends Component {
     render() {
     const isHidden = this.props.isHidden ? 'isHidden' : ''
     const isToday = this.props.isToday ? 'isToday' : ''
+    const isFebrFirst = this.props.isFebrFirst ? 'isFebrFirst' : ''
     return (
       <div
-        className={`day ${isHidden} ${isToday}`}
+        className={`day ${isHidden} ${isToday} ${isFebrFirst}`}
         onClick={this.handleClick}
       >
         {this.props.value}

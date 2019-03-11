@@ -10,12 +10,14 @@ export default class Month extends Component {
     let daysCounter = 1 // counter of month days
     const n = firstDay.getDay() + lastDate // number of the last cell
     const daysArray = []
+    const febrFirst = new Date(2019, 1)
     
     const renderDay = (x) => {
       let isToday = false
       const today = new Date()
       let value = null
       let isHidden = true
+      let isFebrFirst = false
 
       if (x >= firstDay.getDay()) {
         value = daysCounter++
@@ -32,6 +34,10 @@ export default class Month extends Component {
       if (new Date(today.getFullYear(), today.getMonth(), today.getDate()).valueOf() === +date) { // highlight today
         isToday = true
       }       
+
+      if (+febrFirst === +date) {
+        isFebrFirst = true
+      }
       
       return (
         <Day
@@ -40,6 +46,7 @@ export default class Month extends Component {
           key={x}
           isHidden={isHidden}
           isToday={isToday}
+          isFebrFirst={isFebrFirst}
           startSelect={this.props.startSelect}
         />
       )

@@ -20,6 +20,14 @@
   color: rgb(37, 28, 28);
 }
 
+.isFebrFirst {
+  background: url('../white_circle_png_transparent_1506588.png') 54% bottom no-repeat / 60%;
+}
+
+.isFebrFirst:hover {
+  background: url('../white_circle_png_transparent_1506588.png') 54% bottom no-repeat / 60% rgb(84, 182, 187);
+}
+
 .selected {
   color: red;
 }

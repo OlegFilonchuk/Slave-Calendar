@@ -20,6 +20,12 @@
   box-shadow: 1px 1px 1px 1px lightgrey;
 }
 
+.sidebar__button:active {
+  transform: translateY(1px);
+  filter: saturate(150%);
+  background: rgb(224, 224, 224);
+}
+
 .total {
   padding: 20px 0 0;
   font-size: 31px;

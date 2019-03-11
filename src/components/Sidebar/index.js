@@ -10,11 +10,10 @@ export default class Sidebar extends Component {
 
   getTotal = (start, end) => {
     if (start && end) {
-      return (+end - +start)/1000/60/60/24 + 1
+      return Math.abs((+end - +start)/1000/60/60/24) + 1
     }
     return 0
   }
-  //TODO: why does this grid chenges sidebar's width?!  
 
   render() {
     const { start, end } = this.props.selection
@@ -24,6 +23,7 @@ export default class Sidebar extends Component {
         <div className="sidebar__button" onClick={this.handleButtonClick}>Remove selection</div>
         <div className="total">Total days:</div>
         <div className='number'>{this.getTotal(start, end)}</div>
+        
       </div>
     )
   }
