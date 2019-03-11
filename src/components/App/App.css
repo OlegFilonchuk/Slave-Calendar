@@ -12,6 +12,6 @@
   /* grid-template-areas:
     'S M M M'
     'S M M M'; */
-  grid-auto-columns: 200px auto;
+  grid-auto-columns: 220px auto;
   grid-auto-rows: auto;
 }
