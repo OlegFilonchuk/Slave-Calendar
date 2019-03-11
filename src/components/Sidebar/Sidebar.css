@@ -38,11 +38,15 @@
   padding-bottom: 40px;
 }
 
-.slavery, .sidebar-today {
+.slavery, .sidebar-today, .passed {
   padding-bottom: 20px;
+}
+
+.passed span {
+  font-weight: bold;
 }
 
 .passed ul {
   list-style-type: none;
-  margin-left: 30px;
+  margin-left: 20px;
 }
