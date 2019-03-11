@@ -1,5 +1,4 @@
 .mainscreen-container {
-  grid-area: M;
   grid-column: 2 / 2;
   grid-row: 1 / 1;
 }
@@ -27,12 +26,12 @@
 }
 
 .mainscreen-list {
-  /* display: grid; */
-  /* grid-template-columns: auto auto; */
-  /* grid-gap: 30px; */
-  display:flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+  /* display:flex; */
+  /* flex-flow: row wrap; */
+  /* justify-content: space-evenly; */
 }
 
 .button {

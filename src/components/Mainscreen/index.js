@@ -42,6 +42,7 @@ export default class Mainscreen extends Component {
           <h1>{this.state.year}</h1>
           <div className="button button-next" onClick={this.handleNextButtonClick}><i className="fas fa-chevron-circle-right"></i></div>
         </div>
+        
         <div className="mainscreen-calendar" ref={(node) => {this.mainscreenCont = node}}>
           <ul className="mainscreen-list">
             {this.getBody()}

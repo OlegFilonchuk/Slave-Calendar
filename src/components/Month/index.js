@@ -55,7 +55,7 @@ export default class Month extends Component {
     const {month} = this.props
     const names = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
     return (
-      <li className="month">
+      <li className="month-list">
         <h3>{names[month]}</h3>
         <div className="month-row month-header">
           <div>Su</div>
@@ -66,6 +66,7 @@ export default class Month extends Component {
           <div>Fr</div>
           <div>Sa</div>
         </div>
+
         <div className="month-row">
           {this.getTable()}
         </div>

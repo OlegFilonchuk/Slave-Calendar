@@ -1,17 +1,16 @@
-.month {
+  .month-list {
   background: rgb(133, 228, 223);
-  list-style-type: none;
   text-align: center;
   border-radius: 5px;
-  user-select: none;
-  box-shadow: 1px 1px 5px 1px #bbbbbb
+  box-shadow: 1px 1px 5px 1px #bbbbbb;
+  list-style-type: none;
 }
 
 .month-row {
   display: grid;
   grid-template-columns: auto auto auto auto auto auto auto;
   row-gap: 10px;
-  padding: 10px 0;;
+  padding: 10px 0;
 }
 
 .month-header {
@@ -19,6 +18,7 @@
   color: black;
 }
 
-h3 {
-  color: grey
+.month-list h3 {
+  padding: 10px;
+  color: grey;
 }

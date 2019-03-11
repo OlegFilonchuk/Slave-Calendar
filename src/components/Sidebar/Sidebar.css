@@ -1,6 +1,5 @@
 .sidebar{
   background: rgb(80, 81, 92);
-  grid-area: S;
   border-radius: 5px;
   padding: 10px;
   box-shadow: 1px 1px 10px 1px grey;
