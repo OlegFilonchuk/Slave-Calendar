@@ -22,16 +22,18 @@ export default class Day extends Component {
 
     if (start && +start === +date) {
       isSelected = true
-    } 
+    }
 
     const hidden = isHidden ? 'isHidden' : ''
     const today = isToday ? 'isToday' : ''
     const febrFirst = isFebrFirst ? 'isFebrFirst' : ''
     const selected = isSelected ? 'selected' : ''
+    const isStart = +start === +date ? 'select-start' : ''
+    const isEnd = +end === +date ? 'select-end' : ''
 
     return (
       <div
-        className={`day ${hidden} ${febrFirst} ${selected} ${today}`}
+        className={`day ${hidden} ${febrFirst} ${selected} ${today} ${isStart} ${isEnd}`}
         onClick={this.handleClick}
       >
         {value}

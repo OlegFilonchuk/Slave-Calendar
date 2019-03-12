@@ -28,10 +28,7 @@
 .mainscreen-list {
   display: grid;
   grid-template-columns: auto auto auto;
-  grid-gap: 10px;
-  /* display:flex; */
-  /* flex-flow: row wrap; */
-  /* justify-content: space-evenly; */
+  grid-gap: 20px;
 }
 
 .button {

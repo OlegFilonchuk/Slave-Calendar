@@ -29,7 +29,14 @@
 }
 
 .selected {
-  color: red;
-  background: rgb(37, 83, 85);
+  background: rgb(62, 115, 117);
   border-radius: 0;
+}
+
+.select-start {
+  border-radius: 5px 0 0 5px;
+}
+
+.select-end {
+  border-radius: 0 5px 5px 0;
 }
