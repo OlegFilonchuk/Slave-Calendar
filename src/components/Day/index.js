@@ -3,23 +3,34 @@ import './Day.css'
 
 export default class Day extends Component {
 
-    handleClick = (ev) => {
-      ev.preventDefault()
-      if (this.props.startSelect(this.props.date)) {
-        ev.target.classList.add('selected')
+  handleClick = (ev) => {
+    ev.preventDefault()
+    if (this.props.startSelect(this.props.date)) {
+      ev.target.classList.add('selected')
+    }
+  }
+  
+  render() {
+    const { start, end, isHidden, isToday, isFebrFirst, value, date } = this.props
+    let isSelected = false
+
+    if (start && end) {
+      if (+start < +date && end >= +date) {
+        isSelected = true
       }
     }
     
-    render() {
-    const isHidden = this.props.isHidden ? 'isHidden' : ''
-    const isToday = this.props.isToday ? 'isToday' : ''
-    const isFebrFirst = this.props.isFebrFirst ? 'isFebrFirst' : ''
+    const hidden = isHidden ? 'isHidden' : ''
+    const today = isToday ? 'isToday' : ''
+    const febrFirst = isFebrFirst ? 'isFebrFirst' : ''
+    const selected = isSelected ? 'selected' : ''
+
     return (
       <div
-        className={`day ${isHidden} ${isToday} ${isFebrFirst}`}
+        className={`day ${hidden} ${today} ${febrFirst} ${selected}`}
         onClick={this.handleClick}
       >
-        {this.props.value}
+        {value}
       </div>
     )
   }

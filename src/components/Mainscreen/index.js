@@ -23,15 +23,16 @@ export default class Mainscreen extends Component {
   }
 
   getBody = () => {
+    const { startSelect, start, end } = this.props
     const monthsArray = [];
     for (let i = 0; i < 12; i++) {
-      monthsArray.push(<Month key={i} year={this.state.year} month={i} startSelect={this.props.startSelect}/>) 
+      monthsArray.push(<Month key={i} year={this.state.year} month={i} startSelect={startSelect} start={start} end={end}/>) 
     }
     return monthsArray
   }
 
   componentDidMount() {
-    this.mainscreenCont.style.height = document.documentElement.clientHeight - parseFloat(getComputedStyle(this.mainscreenHeader).height) - 55 + 'px'
+    this.mainscreenCont.style.height = document.documentElement.clientHeight - parseFloat(getComputedStyle(this.mainscreenHeader).height) /*- 55*/ + 'px'
   }
 
   render() {

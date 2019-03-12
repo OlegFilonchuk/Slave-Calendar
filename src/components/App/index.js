@@ -8,17 +8,13 @@ class App extends Component {
   state = {
     start: null,
     end: null,
-    block: false
+    // block: false
   }
 
   startSelect = (date) => {
-    const { start, block } = this.state
+    const { start } = this.state
 
-    if (block) return
-
-    if (start) {
-      return this.endSelect(date)
-    }
+    // if (block) return
 
     if (!start) {
       this.setState({
@@ -26,22 +22,40 @@ class App extends Component {
       })
     }
 
+    if (start) {
+      return this.endSelect(date)
+    }
+
+    console.log('started!')
     return true
   }
   
   endSelect = (date) => {
-    const { start } = this.state
+    const { start, end } = this.state
     
     if (+date === +start) {
       this.closeSelection()
       return
     }
+
+    if (+date === +end) {
+      this.setState({
+        end:null
+      })
+      let elems = document.querySelectorAll('.selected')
+      elems[elems.length - 1].classList.remove('selected')
+      console.log('end switched!')
+
+      return
+    }
+
     this.setState({
       end: date,
-      block: true
+      // block: true
     })
     //TODO: add selected days higlighting
 
+    console.log('ended!')
     return true
   }
 
@@ -49,12 +63,12 @@ class App extends Component {
     this.setState({
       start: null,
       end: null,
-      block: false
+      // block: false
     })
     document.querySelectorAll('.selected').forEach((elem) => {
       elem.classList.remove('selected')
     })
-    console.log('selection closed')
+    console.log('closed!')
   }
 
   render() {
@@ -63,7 +77,7 @@ class App extends Component {
     return (
       <div className="container">
         <Sidebar selection={{start, end}} closeSelection={this.closeSelection}/>
-        <Mainscreen startSelect={this.startSelect}/>
+        <Mainscreen startSelect={this.startSelect} start={start} end={end}/>
       </div> 
     );
   }

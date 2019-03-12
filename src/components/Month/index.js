@@ -5,6 +5,7 @@ import './Month.css';
 export default class Month extends Component {
   
   getTable = () => {
+    const { startSelect, start, end } = this.props
     const firstDay = new Date(this.props.year, this.props.month) // the first day of the month
     const lastDate = 32 - new Date(this.props.year, this.props.month, 32).getDate() // the number of the last day
     let daysCounter = 1 // counter of month days
@@ -47,7 +48,9 @@ export default class Month extends Component {
           isHidden={isHidden}
           isToday={isToday}
           isFebrFirst={isFebrFirst}
-          startSelect={this.props.startSelect}
+          startSelect={startSelect}
+          start={start}
+          end={end}
         />
       )
     }
