@@ -15,11 +15,15 @@ export default class Day extends Component {
     let isSelected = false
 
     if (start && end) {
-      if (+start < +date && end >= +date) {
+      if ((+start <= +date && end >= +date) /* || (+start >= date && end < date) */) {
         isSelected = true
       }
     }
-    
+
+    if (start && +start === +date) {
+      isSelected = true
+    } 
+
     const hidden = isHidden ? 'isHidden' : ''
     const today = isToday ? 'isToday' : ''
     const febrFirst = isFebrFirst ? 'isFebrFirst' : ''

@@ -8,13 +8,11 @@ class App extends Component {
   state = {
     start: null,
     end: null,
-    // block: false
   }
 
   startSelect = (date) => {
     const { start } = this.state
 
-    // if (block) return
 
     if (!start) {
       this.setState({
@@ -49,11 +47,16 @@ class App extends Component {
       return
     }
 
+    if (+date < +start) {
+      this.setState({
+        start: date,
+      })
+      return
+    }
+
     this.setState({
       end: date,
-      // block: true
     })
-    //TODO: add selected days higlighting
 
     console.log('ended!')
     return true
