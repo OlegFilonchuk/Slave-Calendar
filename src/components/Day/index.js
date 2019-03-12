@@ -31,7 +31,7 @@ export default class Day extends Component {
 
     return (
       <div
-        className={`day ${hidden} ${today} ${febrFirst} ${selected}`}
+        className={`day ${hidden} ${febrFirst} ${selected} ${today}`}
         onClick={this.handleClick}
       >
         {value}

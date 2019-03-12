@@ -30,4 +30,6 @@
 
 .selected {
   color: red;
+  background: rgb(37, 83, 85);
+  border-radius: 0;
 }
