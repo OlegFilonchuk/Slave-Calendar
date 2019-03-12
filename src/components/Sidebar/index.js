@@ -71,7 +71,7 @@ export default class Sidebar extends Component {
         </div>
         <div className="remain">
           <div>
-            {`Remain: ${remainTime.years} years, ${remainTime.months} months, ${remainTime.days} days, ${remainTime.hours} hours, ${remainTime.minutes} minutes, ${remainTime.seconds} seconds`}
+            {`Remain: ${remainTime.years} years ${remainTime.months} months ${remainTime.days} days ${remainTime.hours} hours ${remainTime.minutes} minutes ${remainTime.seconds} seconds`}
           </div>
         </div>
       </div>
