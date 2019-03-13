@@ -35,6 +35,7 @@ export default class Day extends Component {
       <div
         className={`day ${hidden} ${febrFirst} ${selected} ${today} ${isStart} ${isEnd}`}
         onClick={this.handleClick}
+        title={isFebrFirst ? 'There started my journey' : isToday ? 'Today' : ''}
       >
         {value}
       </div>

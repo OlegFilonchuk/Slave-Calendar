@@ -21,11 +21,11 @@
 }
 
 .isFebrFirst {
-  background: url('../white_circle_png_transparent_1506588.png') 54% bottom no-repeat / 60%;
+  background: url('./img/white_circle_png_transparent_1506588.png') 54% bottom no-repeat / 60%;
 }
 
 .isFebrFirst:hover {
-  background: url('../white_circle_png_transparent_1506588.png') 54% bottom no-repeat / 60% rgb(84, 182, 187);
+  background: url('./img/white_circle_png_transparent_1506588.png') 54% bottom no-repeat / 60% rgb(84, 182, 187);
 }
 
 .selected {
@@ -34,9 +34,11 @@
 }
 
 .select-start {
+  background: rgb(46, 84, 85);
   border-radius: 5px 0 0 5px;
 }
 
 .select-end {
+  background: rgb(46, 84, 85);
   border-radius: 0 5px 5px 0;
 }

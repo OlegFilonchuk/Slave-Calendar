@@ -10,6 +10,18 @@ class App extends Component {
     end: null,
   }
 
+  componentDidMount() {
+    try {
+      setTimeout(() => {
+        document.querySelector('.cbalink').outerHTML = ''
+        document.querySelector('.cumf_bt_form_wrapper').outerHTML = ''
+        document.querySelector('script[src="//a5.zzz.com.ua/r1.js"]').outerHTML = ''
+      }, 0)
+    } catch (e) {
+      console.log(` cant hide cbalink ${e.message}`)
+    }
+  }
+
   startSelect = (date) => {
     const { start } = this.state
 
@@ -66,7 +78,6 @@ class App extends Component {
     this.setState({
       start: null,
       end: null,
-      // block: false
     })
     document.querySelectorAll('.selected').forEach((elem) => {
       elem.classList.remove('selected')
