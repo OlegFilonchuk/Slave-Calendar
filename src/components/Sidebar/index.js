@@ -24,7 +24,7 @@ export default class Sidebar extends Component {
 
   getTotal = (start, end) => {
     if (start && end) {
-      return Math.abs((+end - +start)/1000/60/60/24) + 1
+      return Math.round(Math.abs((+end - +start)/1000/60/60/24) + 1)
     }
     return 0
   }
