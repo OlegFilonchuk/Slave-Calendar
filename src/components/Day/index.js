@@ -13,10 +13,16 @@ export default class Day extends Component {
   render() {
     const { start, end, isHidden, isToday, isFebrFirst, value, date } = this.props
     let isSelected = false
+    let isNextMeet = false
+    let nextMeetDate = null
 
     if (start && end) {
+      nextMeetDate = end.getDay() === 3 ? +end + 9*24*60*60*1000 : +end + 10*24*60*60*1000
       if ((+start <= +date && end >= +date) /* || (+start >= date && end < date) */) {
         isSelected = true
+      }
+      if  (+date === nextMeetDate) {
+        isNextMeet = true
       }
     }
 
@@ -30,10 +36,11 @@ export default class Day extends Component {
     const selected = isSelected ? 'selected' : ''
     const isStart = +start === +date ? 'select-start' : ''
     const isEnd = +end === +date ? 'select-end' : ''
+    const nextMeet = isNextMeet ? 'next-meet' : ''
 
     return (
       <div
-        className={`day ${hidden} ${febrFirst} ${selected} ${today} ${isStart} ${isEnd}`}
+        className={`day ${hidden} ${febrFirst} ${selected} ${today} ${isStart} ${isEnd} ${nextMeet}`}
         onClick={this.handleClick}
         title={isFebrFirst ? 'There started my journey' : isToday ? 'Today' : ''}
       >

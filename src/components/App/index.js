@@ -70,6 +70,8 @@ class App extends Component {
       end: date,
     })
 
+
+
     console.log('ended!')
     return true
   }
